@@ -35,36 +35,39 @@
                 <img src=<?php echo $consulta['fotografia'];
                             "<br>" ?> class="img-fluid" alt="">
         <?php
-                echo "<br>" . "DPI: " . $consulta['cui'] . '<br>';
-                echo "Primer nombre: " . $consulta['nombre1'] . '<br>';
-                echo "Segundo nombre: " . $consulta['nombre2'] . '<br>';
+                echo "<br>";
+                echo "<b>DPI:</b> " . $consulta['cui'] . '<br>';
+                echo "<b>Primer nombre:</b> " . $consulta['nombre1'] . '<br>';
+                echo "<b>Segundo nombre:</b> " . $consulta['nombre2'] . '<br>';
                 if (!empty($consulta['nombre3'])) {
-                    echo "Tercer nombre: " . $consulta['nombre3'] . '<br>';
+                    echo "<b>Tercer nombre:</b> " . $consulta['nombre3'] . '<br>';
                 }
-                echo "Primer apellido: " . $consulta['apellido1'] . '<br>';
-                echo "Segundo apellido: " . $consulta['apellido2'] . '<br>';
+                echo "<b>Primer apellido:</b> " . $consulta['apellido1'] . '<br>';
+                echo "<b>Segundo apellido:</b> " . $consulta['apellido2'] . '<br>';
                 if ($consulta['estadoCivil'] == 'C') {
-                    echo "Estado civil: CASADO  <br>";
+                    echo "<b>Estado civil:</b> CASADO  <br>";
                 } else {
-                    echo "Estado civil: SOLTERO  <br>";
+                    echo "<b>Estado civil:</b> SOLTERO  <br>";
                 }
                 if (!empty($consulta['regCedula'])) {
-                    echo "Cedula: " . $consulta['cedula']  . " registro: " . $consulta['regCedula'] . '<br>';
+                    echo "<b>Cedula:</b> " . $consulta['cedula']  . " <b>registro:</b> " . $consulta['regCedula'] . '<br>';
                 }
-                echo "Fecha nacimiento: " . $consulta['nacFecha'] . '<br>';
+                echo "<b>Fecha nacimiento:</b> " . $consulta['nacFecha'] . '<br>';
                 if ($consulta['defuncion'] != 'null') {
-                    echo "Fecha defuncion: " . $consulta['defuncion'] . '<br>';
+                    echo "<b>Fecha defuncion:</b> " . $consulta['defuncion'] . '<br>';
                 }
-                echo "Profesion: " . $consulta['ocupacion'] . '<br>';
-                echo "Municipio de nacimineto: " . $consulta['municipioNac'] . '<br>';
-                echo "Departamento: " . $consulta['deptoNac'] . '<br>';
-                echo "Pais: " . $consulta['pais'] . '<br>';
-                echo "Nacionalidad: " . $consulta['nacionalidad'] . '<br>';
-                echo "Vecindad: " . $consulta['vecindad'] . '<br>';
+                echo "<b>Profesion:</b> " . $consulta['ocupacion'] . '<br>';
+                echo "<b>Municipio de nacimineto:</b> " . $consulta['municipioNac'] . '<br>';
+                echo "<b>Departamento:</b> " . $consulta['deptoNac'] . '<br>';
+                echo "<b>Pais:</b> " . $consulta['pais'] . '<br>';
+                echo "<b>Nacionalidad:</b> " . $consulta['nacionalidad'] . '<br>';
+                if (!empty($consulta['vecindad'])) {
+                    echo "<b>Vecindad:</b> " . $consulta['vecindad'] . '<br>';
+                }
                 if ($consulta['genero'] == 'F') {
-                    echo "Genero: FEMENINO" . '<br><br>';
+                    echo "<b>Genero:</b> FEMENINO" . '<br><br>';
                 } else {
-                    echo "Genero: MASCULINO" . '<br><br>';
+                    echo "<b>Genero:</b> MASCULINO" . '<br><br>';
                 }
             }
 
