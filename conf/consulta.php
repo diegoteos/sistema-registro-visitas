@@ -19,21 +19,20 @@
         </form>
         <br>
     </div>
-
     <div class="container">
 
         <?php
 
-        //if (isset($_POST['dpi']) && $_POST['btn2']){
-        if (isset($_POST['btn2'])) {
+        if (!empty($_POST['cui']) && is_numeric($_POST['cui']) && $_POST['btn2']){
+        //if (isset($_POST['btn2'])) {
             require_once 'conexion.php';
             $cui = $_POST['cui'];
-
             $res = mysqli_query($conexion, "SELECT * FROM $tabla WHERE `cui` = $cui");
             while ($consulta = mysqli_fetch_array($res)) {
         ?>
-                <img src=<?php echo $consulta['fotografia'];
-                            "<br>" ?> class="img-fluid" alt="">
+                
+                <img src=<?php echo $consulta['fotografia'];"<br>" ?> class="img-fluid" alt="">
+
         <?php
                 echo "<br>";
                 echo "<b>DPI:</b> " . $consulta['cui'] . '<br>';

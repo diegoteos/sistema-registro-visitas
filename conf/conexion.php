@@ -1,6 +1,5 @@
 <?php
 
-
 $servidor = "localhost";
 $user = "root";
 $contraseña = "";
